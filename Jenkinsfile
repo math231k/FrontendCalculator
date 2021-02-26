@@ -21,8 +21,8 @@ pipeline {
 				{
 					sh "docker network create Group1"
 					sh "docker run -d --rm -p 11111:4444 --net=Group1 --name selenium-hub-Group1 selenium/hub"
-					sh "docker run -d --rm --net=Group1 -e HUB_HOST=selenium-hub --name selenium-node-firefox-Group1 selenium/node-firefox" 
-					sh "docker run -d --rm --net=Group1 -e HUB_HOST=selenium-hub --name selenium-node-chrome-Group1 selenium/node-chrome"
+					sh "docker run -d --rm --net=Group1 -e HUB_HOST=selenium-hub-Group1 --name selenium-node-firefox-Group1 selenium/node-firefox" 
+					sh "docker run -d --rm --net=Group1 -e HUB_HOST=selenium-hub-Group1 --name selenium-node-chrome-Group1 selenium/node-chrome"
 					sh "docker run -d --rm --net=Group1 --name app-test-container-Group1 math231k/frontend-calc"
 				}
 			}
