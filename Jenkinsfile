@@ -12,7 +12,7 @@ pipeline {
 		{
 			steps{
 			sh "docker build . -t math231k/frontend-calc"
-			withCredentials([[$class: 'UsernamePasswordMultiBinding', credentialsId: 'DockerHub', usernameVariable 'USERNAME', passwordVariable: 'PASSWORD']])
+			withCredentials([[$class: 'UsernamePasswordMultiBinding', credentialsId: 'DockerID', usernameVariable 'USERNAME', passwordVariable: 'PASSWORD']])
 			{
 				sh 'docker login -u ${USERNAME} -p ${PASSWORD}'
 			}
