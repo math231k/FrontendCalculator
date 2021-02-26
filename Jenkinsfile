@@ -1,11 +1,5 @@
 pipeline {
-	agent {
-		dockerfile true
-	}
-	triggers {
-		cron 'H/30 * * * *'
-		pollSCM 'H/3 * * * *'
-	}
+	agent any
 	stages 
 	{
 		stage("Deliver to Docker Hub")
