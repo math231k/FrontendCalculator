@@ -2,7 +2,7 @@
   "id": "457e59ef-dbbc-4445-8782-aa297f31099f",
   "version": "2.0",
   "name": "Frontend Calculator test",
-  "url": "http://localhost:12000",
+  "url": "http://localhost:11111",
   "tests": [{
     "id": "78e2af0b-f21e-47d8-8004-6bdcd3b02cfa",
     "name": "Positive sum",
