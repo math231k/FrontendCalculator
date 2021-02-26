@@ -2,6 +2,18 @@ pipeline {
 	agent any
 		stages 
 		{
+			stage("Cleaning")
+			{
+				steps 
+				{
+					echo "Cleaning the Docker environment"
+					sh script:"docker stop selenium-hub", returnStatus:true
+					sh script:"docker stop selenium-node-firefox", returnStatus:true
+					sh script:"docker stop selenium-node-chrome", returnStatus:true
+					sh script:"docker stop selenium-app-test-container", returnStatus:true
+					sh script:"docker network remove Group1", returnStatus:true
+				}
+			}
 			stage("Deliver to Docker Hub")
 			{
 				steps
