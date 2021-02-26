@@ -19,11 +19,11 @@ pipeline {
 			{
 				steps
 				{
-					sh "docker network create SE"
-					sh "docker run -d --rm -p 11111:80 --net=SE --name selenium-hub selenium/hub"
-					sh "docker run -d --rm --net=SE -e HUB_HOST=selenium-hub --name selenium-node-firefox selenium/node-firefox" 
-					sh "docker run -d --rm --net=SE -e HUB_HOST=selenium-hub --name selenium-node-chrome selenium/node-chrome"
-					sh "docker run -d --rm --net=SE --name app-test-container math231k/frontend-calc"
+					sh "docker network create Group1"
+					sh "docker run -d --rm -p 11111:80 --net=Group1 --name selenium-hub selenium/hub"
+					sh "docker run -d --rm --net=Group1 -e HUB_HOST=selenium-hub --name selenium-node-firefox selenium/node-firefox" 
+					sh "docker run -d --rm --net=Group1 -e HUB_HOST=selenium-hub --name selenium-node-chrome selenium/node-chrome"
+					sh "docker run -d --rm --net=Group1 --name app-test-container math231k/frontend-calc"
 				}
 			}
 			
@@ -45,7 +45,7 @@ pipeline {
 				sh script:"docker stop selenium-node-firefox", returnStatus:true
 				sh script:"docker stop selenium-node-chrome", returnStatus:true
 				sh script:"docker stop selenium-app-test-container", returnStatus:true
-				sh script:"docker network remove SE", returnStatus:true
+				sh script:"docker network remove Group1", returnStatus:true
 			}
 		}
 	}
