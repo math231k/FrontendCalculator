@@ -11,7 +11,7 @@ pipeline {
 					{
 						sh 'docker login -u ${USERNAME} -p ${PASSWORD}'
 					}
-					sh "docker push math231k/fontend-calc"
+					sh "docker push math231k/frontend-calc"
 				}
 			}
 			
@@ -21,8 +21,8 @@ pipeline {
 				{
 					sh "docker network create SE"
 					sh "docker run -d --rm -p 4444:4444 --net=SE --name selenium-hub selenium/hub"
-					sh "docker run -d --rm --net=SE -e HUB_HOST=selenium-hub -- name selenium-node-firefox selenium/node-firefox" 
-					sh "docker run -d --rm --net=SE -e HUB_HOST=selenium-hub -- name selenium-node-chrome selenium/node-chrome"
+					sh "docker run -d --rm --net=SE -e HUB_HOST=selenium-hub --name selenium-node-firefox selenium/node-firefox" 
+					sh "docker run -d --rm --net=SE -e HUB_HOST=selenium-hub --name selenium-node-chrome selenium/node-chrome"
 					sh "docker run -d --rm --net=SE --name app-test-container boulundeasv/frontend-calc"
 				}
 			}
