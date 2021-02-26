@@ -2,7 +2,7 @@
   "id": "457e59ef-dbbc-4445-8782-aa297f31099f",
   "version": "2.0",
   "name": "Frontend Calculator test",
-  "url": "http://localhost:11111",
+  "url": "http://localhost:11111/",
   "tests": [{
     "id": "78e2af0b-f21e-47d8-8004-6bdcd3b02cfa",
     "name": "Positive sum",
@@ -754,8 +754,8 @@
     "persistSession": false,
     "parallel": false,
     "timeout": 300,
-    "tests": ["78e2af0b-f21e-47d8-8004-6bdcd3b02cfa"]
+    "tests": ["78e2af0b-f21e-47d8-8004-6bdcd3b02cfa", "e5a1e7cf-bc16-4149-b098-5ba247b8d6b8", "63c27bc7-7685-480c-8d94-9dd8ea4c44e9", "c4a060d7-2a03-4669-8182-af10b11d6f3a", "61bcae7a-dd1d-4037-9f24-4b55f6fbaeb4"]
   }],
-  "urls": ["http://localhost:11111/"],
+  "urls": ["http://localhost:12000/", "http://localhost:11111/"],
   "plugins": []
 }

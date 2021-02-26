@@ -44,7 +44,7 @@ pipeline {
 				sh script:"docker stop selenium-hub-Group1", returnStatus:true
 				sh script:"docker stop selenium-node-firefox-Group1", returnStatus:true
 				sh script:"docker stop selenium-node-chrome-Group1", returnStatus:true
-				sh script:"docker stop selenium-app-test-container-Group1", returnStatus:true
+				sh script:"docker stop app-test-container-Group1", returnStatus:true
 				sh script:"docker network remove Group1", returnStatus:true
 			}
 		}
