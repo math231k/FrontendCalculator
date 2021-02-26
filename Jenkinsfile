@@ -23,7 +23,7 @@ pipeline {
 					sh "docker run -d --rm -p 11111:11111 --net=SE --name selenium-hub selenium/hub"
 					sh "docker run -d --rm --net=SE -e HUB_HOST=selenium-hub --name selenium-node-firefox selenium/node-firefox" 
 					sh "docker run -d --rm --net=SE -e HUB_HOST=selenium-hub --name selenium-node-chrome selenium/node-chrome"
-					sh "docker run -d --rm --net=SE --name app-test-container boulundeasv/frontend-calc"
+					sh "docker run -d --rm --net=SE --name app-test-container math231k/frontend-calc"
 				}
 			}
 			
@@ -31,8 +31,8 @@ pipeline {
 			{
 				steps 
 				{
-					sh "selenium-side-runner --server http:localhost:11111/wd/hub -c 'browserName=firefox' --base-url http://app-test-container test/system/FunktionalTests.side"
-					sh "selenium-side-runner --server http:localhost:11111/wd/hub -c 'browserName=chrome' --base-url http://app-test-container test/system/FunktionalTests.side"
+					sh "selenium-side-runner --server http:localhost:11111/wd/hub -c 'browserName=firefox' --base-url http://app-test-container test/system/FrontendCalculatortest.side"
+					sh "selenium-side-runner --server http:localhost:11111/wd/hub -c 'browserName=chrome' --base-url http://app-test-container test/system/FrontendCalculatortest.side"
 				}				
 			}
 		}
