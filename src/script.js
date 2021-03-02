@@ -28,3 +28,7 @@ function calculateFactorial() {
     $("#fact-result").val(result);
 }
 
+function calculatePower(x, y){
+    var result = Math.pow(x, y);
+    $("#result").val(result);
+}
