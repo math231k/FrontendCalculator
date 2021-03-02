@@ -1,5 +1,8 @@
 pipeline {
 	agent any
+	triggers {
+    		pollSCM 'H/12 * * * *'
+    	}
 		stages 
 		{
 			stage("Deliver to Docker Hub")
