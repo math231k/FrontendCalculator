@@ -21,7 +21,8 @@
   <component name="ChangeListManager">
     <list default="true" id="4f099cbc-08de-485f-98b7-dfa11223cbe1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Jenkinsfile" beforeDir="false" afterPath="$PROJECT_DIR$/Jenkinsfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/script.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +41,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -52,7 +54,7 @@
       <updated>1614334302470</updated>
       <workItem from="1614334303552" duration="78000" />
       <workItem from="1614469045428" duration="34000" />
-      <workItem from="1614710539995" duration="148000" />
+      <workItem from="1614710539995" duration="1847000" />
     </task>
     <servers />
   </component>
@@ -76,5 +78,9 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1060" y="457" key="FileChooserDialogImpl/0.0.2560.1400/2560.0.1920.1080@0.0.2560.1400" timestamp="1614469071883" />
+    <state x="943" y="315" width="672" height="678" key="search.everywhere.popup" timestamp="1614712076013">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="943" y="315" width="672" height="678" key="search.everywhere.popup/0.0.2560.1400/2560.0.1920.1080@0.0.2560.1400" timestamp="1614712076013" />
   </component>
 </project>
